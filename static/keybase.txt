@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/andoriyu
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://andoriyu.xyz
+  * I am andoriyu (https://keybase.io/andoriyu) on keybase.
+  * I have a public key ASBGxuMkNYIUV1z5ongr9vpu2JP1ZeWILLKDvORlmwPLLwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101fe64db1edf106e7577326dd1b175f67bc56e20a8818b353f29a6659b24dea64d0a",
+      "host": "keybase.io",
+      "kid": "012046c6e324358214575cf9a2782bf6fa6ed893f565e5882cb283bce4659b03cb2f0a",
+      "uid": "f112ac86a32c789f76271998c62c6419",
+      "username": "andoriyu"
+    },
+    "merkle_root": {
+      "ctime": 1565929679,
+      "hash": "337051b9a0bac11db47cedb021c4e23d4c70eabbc1694a313870eb3379d7f23c4ab36c16cd31e4550a41900a7ad984566ed3ec05a35f8be43852d13fac41ae21",
+      "hash_meta": "df043cb0b24732862cb69c44e607b07e4a5dc8e2f17f115d13ebbccaafb4f5f1",
+      "seqno": 6027687
+    },
+    "service": {
+      "entropy": "Yt/+tBF6gXQiXrZT9Lg0W98K",
+      "hostname": "andoriyu.xyz",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.2.1"
+  },
+  "ctime": 1565929763,
+  "expire_in": 504576000,
+  "prev": "6e9ea29aa8bb3bf3c4f09850ea49c411b26e3a33b275f7cc779a487f03bdc91c",
+  "seqno": 15,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgRsbjJDWCFFdc+aJ4K/b6btiT9WXliCyyg7zkZZsDyy8Kp3BheWxvYWTESpcCD8Qgbp6imqi7O/PE8JhQ6knEEbJuOjOydffMd5pIfwO9yRzEICJ5gtnXoAb86d3wdMSMqATN4Va5lgeyFqrP8MP/T//vAgHCo3NpZ8RAWnwxVrR6Khjluzvch6sjlkomgX0wv3fgSNuhO50CUA9BLi+qNtK+piMlNQpDpdkszavZnB/q20rqCPj+c022BKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICl+T51nee45yaS6cM5qaEUnVqfQiVtz4o/yBoo1bjtGo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/andoriyu
+
+==================================================================
