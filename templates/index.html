@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <title>{{ config.title }}/{{ section.title }}</title>
     <link rel="stylesheet" href="{{ get_url(path="style.css", trailing_slash=false) }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Raleway:200&display=swap" rel="stylesheet">
