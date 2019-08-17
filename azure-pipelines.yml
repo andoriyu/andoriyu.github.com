@@ -26,7 +26,9 @@ steps:
     mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa
     chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
     ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-  displayName: 'Setup SSH'
+    git config --local user.name "Azure Pipelines"
+    git config --local user.email "azuredevops@microsoft.com"
+  displayName: 'Setup Git'
 
 - script: |
     git clone git@github.com:andoriyu/andoriyu.github.com.git pages
