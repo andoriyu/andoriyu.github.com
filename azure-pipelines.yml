@@ -1,0 +1,42 @@
+# Publish GitHub Pages
+# azure-pipelines.yml
+
+trigger:
+- src
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- script: |
+    curl -LSfs https://japaric.github.io/trust/install.sh | sh -s -- --git getzola/zola
+    sudo ln -s /home/vsts/.cargo/bin/zola /usr/local/bin/
+  displayName: Install Zola
+
+- script: |
+    zola build
+  displayName: Build Pages
+
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: deploy_key
+  displayName: 'Get the deploy key'
+
+- script: |
+    mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa
+    chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
+    ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+  displayName: 'Setup SSH'
+
+- script: |
+    git clone git@github.com:andoriyu/andoriyu.github.com.git pages
+    rm -rf pages/*
+    cp -R public/* pages/
+    cd pages
+    git add .
+    git commit -m "Publishing GitHub Pages  ***NO_CI***"
+    git push origin HEAD:master
+  displayName: 'Publish GitHub Pages'
+  condition: |
+    and(not(eq(variables['Build.Reason'], 'PullRequest')),
+        eq(variables['Build.SourceBranch'], 'refs/heads/src'))
