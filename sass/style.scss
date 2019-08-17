@@ -3,6 +3,7 @@
 @import "syntax.scss";
 @import "animate.scss";
 @import "mine.scss";
+@import "nord.scss";
 
 /* Webkit Scrollbar Customize */
 ::-webkit-scrollbar {
@@ -87,7 +88,7 @@ blockquote {
 }
 
 a {
-  color: $text;
+  color: $nord6;
   text-decoration: none;
   border: none;
   transition-property: color;
@@ -199,7 +200,7 @@ table {
   width: 100%;
   box-sizing: border-box;
   box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.45);
-  background-color: $dark-grey;
+  background-color: $nord0;
 }
 
 .hdr-wrapper {
@@ -271,7 +272,7 @@ table {
   z-index: 1;
   box-sizing: border-box;
   box-shadow: -1px -2px 3px 0px rgba(0, 0, 0, 0.45);
-  background-color: $dark-grey;
+  background-color: $nord0;
 
   ul {
     list-style: none;
