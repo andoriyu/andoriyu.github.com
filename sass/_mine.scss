@@ -1,3 +1,5 @@
+@import "_nord.scss";
+
 .index {
   font-family: 'Raleway', $fonts;
 
@@ -9,5 +11,30 @@
   #home-subtitle {
     font-size: 2em;
     font-weight: 200;
+  }
+}
+
+
+.container {
+  nav {
+	display: flex; /* or inline-flex */
+	justify-content: flex-end;
+	padding: 27px 50px;
+  }
+}
+
+
+#resume {
+  color: $nord14;
+  background-color: transparent;
+  border: 1px solid $nord14;
+  border-radius: 3px;
+  padding: 5px 15px;
+  font-size: 16px;
+  font-weight: 600;
+
+  &:hover {
+    box-shadow: 0 0 2px $nord14;
+    text-shadow: 0 0 1px $nord14;
   }
 }
