@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block htmltitle %}
+{% endblock htmltitle %}
+
+{% block body %}
+  <body id="page" class="index">
+    {{ macros::navbar() }}
+    <div class="wrap page">
+        <div class="section" id="title">
+          <h1>{% block title %}{% endblock title %}</h1>
+        </div>
+        <div class="section" id="content">
+            {% block content %}{% endblock content %}
+        </div>
+    </div>
+    {{ macros::footer() }}
+  </body>
+{% endblock body %}

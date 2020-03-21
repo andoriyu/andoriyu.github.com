@@ -91,14 +91,6 @@ a {
   color: $nord6;
   text-decoration: none;
   border: none;
-  transition-property: color;
-  transition-duration: .4s;
-  transition-timing-function: ease-out;
-
-  &:hover {
-    color: #fff;
-    text-shadow: 0 0 1px #fff;
-  }
 }
 
 hr {
@@ -194,13 +186,16 @@ table {
 // Header & Footer
 //
 #site-header {
-  position: fixed;
+  max-width: 70rem;
+  margin: auto;
+  font-family: "Fira Sans";
   z-index: 1;
-  bottom: 0;
+  top: 0;
   width: 100%;
-  box-sizing: border-box;
-  box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.45);
-  background-color: $nord0;
+  a {
+    color: $nord14;
+    text-decoration: none;
+  }
 }
 
 .hdr-wrapper {

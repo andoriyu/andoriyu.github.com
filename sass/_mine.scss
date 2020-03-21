@@ -19,8 +19,77 @@
   align-self: stretch;
   nav {
 	display: flex; /* or inline-flex */
-	justify-content: flex-end;
-	padding: 27px 0px;
+	padding: 10px 0px 0px 0px;
+  ul { list-style: none;}
+  }
+}
+
+.navlinks {
+  padding-top: 5px;
+  flex-basis: 100%;
+}
+
+.page {
+  max-width: 70rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+  font-family: "Fira Sans, $fonts";
+  h1 {
+    position: relative;
+    display: inline-block;
+    padding: 20px 0 30px;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    color: $nord14;
+    font-size: 1.25rem;
+    &:after {
+      content: "====================================================================================================================================";
+      position: absolute;
+      bottom: 10px;
+      left: 0px;
+      font-family: "DejaVu Sans Mono, mono"
+    }
+  }
+  h3 {
+    color: $nord14;
+    font-size: 1.0rem;
+    &:before {
+      content: "### ";
+      display: inline;
+      font-family: "DejaVu Sans Mono, mono"
+    }
+  }
+
+  li {
+    color: $nord13;
+    position: relative;
+    display: block;
+    padding-left: 17px;
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  ul {
+    color: $nord13;
+  }
+  ul > {
+    li {
+      &:after {
+        content: "-";
+      }
+    }
+  }
+  a {
+    color: $nord15;
+    text-decoration: none;
+    border-bottom: 1px solid $nord15;
+    &:hover {
+      background-color: $nord15;
+      color: $nord5;
+    }
   }
 }
 
@@ -33,9 +102,20 @@
   padding: 5px 15px;
   font-size: 16px;
   font-weight: 600;
+  align-self: flex-end;
+  order: 99;
 
   &:hover {
     box-shadow: 0 0 2px $nord14;
     text-shadow: 0 0 1px $nord14;
+  }
+  a {
+    transition-property: color;
+    transition-duration: .4s;
+    transition-timing-function: ease-out;
+    &:hover {
+      color: #fff;
+      text-shadow: 0 0 1px #fff;
+    }
   }
 }

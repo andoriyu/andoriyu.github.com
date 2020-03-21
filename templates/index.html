@@ -1,9 +1,11 @@
+{% import "macros.html" as macros %}
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ config.title }}/{{ section.title }}</title>
+
+    <title>{% block htmltitle %}{{ config.title }}{% endblock htmltitle %}</title>
     <link rel="stylesheet" href="{{ get_url(path="style.css", trailing_slash=false) }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Raleway:200&display=swap" rel="stylesheet">
@@ -36,13 +38,10 @@
     <meta property="og:url" content="{{ current_url }}" />
 
   </head>
+  {% block body %}
   <body id="page" class="index animated fadeIn">
+    {{ macros::navbar() }}
     <div id="spotlight">
-      <header class="container">
-        <nav>
-          <a id="resume" href="/AndreyCherkashin.pdf" target="_blank">Resume</a>
-        </nav>
-      </header>
       <div id="home-center">
         <h1 id="home-title">Andrey C. Snow</h1>
         <p id="home-subtitle">Los Angeles, CA</p>
@@ -64,12 +63,7 @@
           </nav>
         -->
       </div>
-      <div id="home-footer">
-        <p>
-            &copy; 2019 Andrey C. Snow &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a> &#183; Built with <a href="https://www.getzola.org/" target="_blank" rel="noopener">Zola</a> &#183; Written in <a href="https://neovim.io/" target="_blank" rel="noopener">NeoVim</a> &#183;
-
-        </p>
-      </div>
-    </div>
+      {{ macros::footer() }}
   </body>
+  {% endblock body %}
 </html>
